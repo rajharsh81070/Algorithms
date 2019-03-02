@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/*Time Complexity :- The algorithm works in O(n+m) time, where n is number of vertices and m is 
+the number of edges.*/
+
 class Graph{
 	int V;
 	map <T, list<T> > adjList;
@@ -19,6 +22,7 @@ public:
 			q.pop();
 
 			for(auto neighbour:adjList[node]){
+				//  parent[node]!=neighbour this is to check we don't check the parent of the node. 
 				if(visited[neighbour] && parent[node]!=neighbour)
 					return true;
 				else if(!visited[neighbour]){

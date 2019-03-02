@@ -1,6 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*Algorithm :- The algorithm works such as, the path found by breadth first search to any node is 
+the shortest path to that node, i.e the path that contains the smallest number of edges in 
+unweighted graphs.*/ 
+
+/*Time Complexity :- The algorithm works in O(n+m) time, where n is number of vertices and m is 
+the number of edges.*/
+
 class Graph{
 	int V;
 	list <int> *adjList;

@@ -1,6 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*Algorithm :- The idea behind DFS is to go as deep into the graph as possible, and backtrack 
+once you are at a vertex without any unvisited adjacent vertices.*/
+
+/*Time Complexity :- The algorithm works in O(m+n) time where n is the number of vertices and m 
+is the number of edges.*/
+
 class Graph{
 	int V;
 	map < int, list<int> > adjList;
