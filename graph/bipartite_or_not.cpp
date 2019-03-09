@@ -5,33 +5,42 @@ vector <int> adjList[101];
 int V;
 
 bool is_bipartite(){
-	vector <int> side(V+1, -1);
-	bool visited[V+1] = {false};
+	vector <int> color(V+1, -1);
 	queue <int> q;
-	bool check_bipartite = true;
 	for(int node=1; node<=V; node++){
-		if(side[node]==-1){
+		if(color[node]==-1){
 			q.push(node);
-			side[node] = 0;
+			color[node] = 0;
 			while(!q.empty()){
 				int neighbour = q.front();
 				q.pop();
 				for(int v:adjList[neighbour]){
-					if(side[v]==-1){
-						side[v] = side[neighbour] ^ 1;
+					if(color[v]==-1){
+						color[v] = color[neighbour] ^ 1;
 						q.push(v);
 					}
-					else{
-						check_bipartite &= (side[neighbour]!=side[v]);
+					else if(color[neighbour]==color[v]){
+						// cout << neighbour << " " << v << ' ' << node;
+						return false;
 					}
 				}
 			}
 		}
 	}
-	return check_bipartite;
+	return true;
 }
 
 int main(){
 	cin >> V;
-	cout << is_bipartite() ? "YES" : "NO" << '\n';
+	adjList[1].push_back(2);
+	adjList[2].push_back(1);
+	adjList[3].push_back(1);
+	adjList[1].push_back(3);
+	adjList[2].push_back(4);
+	adjList[4].push_back(2);
+	adjList[3].push_back(4);
+	adjList[4].push_back(3);
+	adjList[4].push_back(1);
+	adjList[1].push_back(4);
+	cout << (is_bipartite() ? "YES" : "NO") << "\n";
 }
