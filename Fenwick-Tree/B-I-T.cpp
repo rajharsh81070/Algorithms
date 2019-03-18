@@ -3,8 +3,8 @@ using namespace std;
 
 // Range sum Query Code.
 
-int arr[10001];
-int BIT[10001] = {0};
+int arr[MAXN];
+int BIT[MAXN] = {0};
 
 void update(int i, int inc, int N){
 	while(i <= N){
