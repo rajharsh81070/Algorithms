@@ -1,6 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+/* 
+Every index 'i' in BIT array stores the cumulative sum from the index 'i' to 'i-(1<<r)+1'
+(both inclusive), where 'r' represents the last set bit in the index 'i'.
+*/ 
+
+
 // Range sum Query Code.
 
 int arr[MAXN];
