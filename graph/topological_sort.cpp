@@ -2,7 +2,7 @@
 using namespace std;
 
 /*To check cycle detection in directed graph the condition is that ("If count of visited nodes 
-is not equal to the number of nodes in the graph has cycle, otherwise not.")*/  
+is not equal to the number of nodes in the graph then the graph has cycle, otherwise not.")*/  
 
 class Graph{
 	map <T, list<T> > adjList;
