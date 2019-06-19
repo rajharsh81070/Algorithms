@@ -9,7 +9,7 @@ void sieve(){
 	for(int i=3; i*i<MAXN; i+=2){
 		if(prime[i]){
 			for(int j=i*i; j<MAXN; j+=2*i)
-				prime[i] = false;
+				prime[j] = false;
 		}
 	}
 }

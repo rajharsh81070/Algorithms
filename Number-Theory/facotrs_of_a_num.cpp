@@ -6,7 +6,7 @@ void factors_of_a_number(int num){
 	vector <int> factors;
 	int i = 0;
 	int p = primes[i];
-	while(p*p<=m){
+	while(p*p<=num){
 		if(!(num/p)){
 			factors.push_back(p);
 			while(!(num/p)){
