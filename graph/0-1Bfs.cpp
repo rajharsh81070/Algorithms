@@ -16,7 +16,7 @@ void 0-1Bfs(){
 			int cost = child.second;
 			if(d[node]+cost < d[u]){
 				d[u] = d[node]+cost;
-				if(w==1)
+				if(cost==1)
 					q.push_back(u);
 				else
 					q.push_front(u);
