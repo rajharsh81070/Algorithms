@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Counting Sort is an linear sorting algorithm. 
-// Time Complexity - O(max(maxElement, n)).
+// Counting Sort is an example of linear sorting algorithm. 
+// Time Complexity - O(n+k) where k is the maximum element in the range. 
 // Space Complexity - O(n).
 
 void countingSort(vector<int>&A) {
